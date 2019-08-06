@@ -1,0 +1,6 @@
+com\stc\labs\customer\repo\CustomerRepository.class
+com\stc\labs\customer\domain\model\Customer.class
+com\stc\labs\customer\controller\CustomerController.class
+com\stc\labs\customer\CustomerApplication.class
+com\stc\labs\customer\domain\service\CustomerService.class
+com\stc\labs\customer\domain\service\CustomerServiceImpl.class
