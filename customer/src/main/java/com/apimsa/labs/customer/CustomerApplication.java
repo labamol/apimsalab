@@ -32,12 +32,12 @@ public class CustomerApplication {
 		
 		public void saveData(){
 			System.out.println("===================Save Customers to Cassandra===================");
-			Customer cust_1 = new Customer("1", "PeterSmith", "9008397190", "A", "A2");
-	        Customer cust_2 = new Customer("2", "MaryTaylor", "9008397191", "B", "B1");
-	        Customer cust_3 = new Customer("3", "PeterBrown", "7398397190", "C", "C3");
-	        Customer cust_4 = new Customer("4", "LaurenTaylor", "9073797190", "A", "A1");
-	        Customer cust_5 = new Customer("5", "LaurenFlores", "7808397190", "B", "B1");
-	        Customer cust_6 = new Customer("6", "PeterWilliams", "8908397190", "C", "C2");
+			Customer cust_1 = new Customer(1, "PeterSmith", "9008397190", "A", "A2");
+	        Customer cust_2 = new Customer(2, "MaryTaylor", "9008397191", "B", "B1");
+	        Customer cust_3 = new Customer(3, "PeterBrown", "7398397190", "C", "C3");
+	        Customer cust_4 = new Customer(4, "LaurenTaylor", "9073797190", "A", "A1");
+	        Customer cust_5 = new Customer(5, "LaurenFlores", "7808397190", "B", "B1");
+	        Customer cust_6 = new Customer(6, "PeterWilliams", "8908397190", "C", "C2");
 	 
 	        // save customers to ElasticSearch
 	        customerRepository.save(cust_1);

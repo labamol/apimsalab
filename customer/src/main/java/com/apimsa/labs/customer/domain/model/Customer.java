@@ -7,7 +7,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class Customer {
 	
 	@PrimaryKey
-	private String customerId;
+	private int customerId;
 	private String customerName;
 	private String customerPhone;
 	private String customerType;
@@ -23,7 +23,7 @@ public class Customer {
 	 * @param customerType
 	 * @param customerSubType
 	 */
-	public Customer(String customerId, String customerName, String customerPhone, String customerType,
+	public Customer(int customerId, String customerName, String customerPhone, String customerType,
 			String customerSubType) {
 		super();
 		this.customerId = customerId;
@@ -36,14 +36,14 @@ public class Customer {
 
 
 
-	public String getCustomerId() {
+	public int getCustomerId() {
 		return customerId;
 	}
 
 
 
 
-	public void setCustomerId(String customerId) {
+	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
 
