@@ -1,0 +1,8 @@
+com\apimsa\labs\servicerequest\doc\SwaggerConfig.class
+com\apimsa\labs\servicerequest\domain\service\ServiceRequestServiceImpl.class
+com\apimsa\labs\servicerequest\repo\ServiceRequestRepository.class
+com\apimsa\labs\servicerequest\domain\service\ServiceRequestService.class
+com\apimsa\labs\servicerequest\ServiceRequestApplication.class
+com\apimsa\labs\servicerequest\config\JaegerConfiguration.class
+com\apimsa\labs\servicerequest\controller\ServiceRequestController.class
+com\apimsa\labs\servicerequest\domain\model\ServiceRequest.class

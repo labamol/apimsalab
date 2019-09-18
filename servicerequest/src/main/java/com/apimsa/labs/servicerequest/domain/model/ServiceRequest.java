@@ -1,14 +1,20 @@
 package com.apimsa.labs.servicerequest.domain.model;
 
 import org.springframework.data.annotation.Id;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 
 @Document(collection="servicerequest")
 public class ServiceRequest {
 	
+	// by default mongo documents have a _id
 	@Id
+	public ObjectId _id;
+	
+	@Indexed(unique = true)
 	private String serviceRequestId;
+	
 	private String serviceRequestCustomerId;
 	private String serviceRequestSeverity;
 	private String serviceRequestAssignedTo;
@@ -18,9 +24,10 @@ public class ServiceRequest {
 
 	
 	
-	public ServiceRequest(String serviceRequestId, String serviceRequestCustomerId, String serviceRequestSeverity,
+	public ServiceRequest(ObjectId _id, String serviceRequestId, String serviceRequestCustomerId, String serviceRequestSeverity,
 			String serviceRequestAssignedTo, String serviceRequestRaisedOn, String serviceRequestClosedOn) {
 		super();
+		this._id = _id;
 		this.serviceRequestId = serviceRequestId;
 		this.serviceRequestCustomerId = serviceRequestCustomerId;
 		this.serviceRequestSeverity = serviceRequestSeverity;
@@ -30,6 +37,10 @@ public class ServiceRequest {
 	}
 
 
+	// ObjectId needs to be converted to string
+	public String get_id() { return _id.toHexString(); }
+	  
+	public void set_id(ObjectId _id) { this._id = _id; }
 
 
 	public String getServiceRequestId() {
