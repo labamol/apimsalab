@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicerequest-springapp
+  labels:
+    app: servicerequest-springapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servicerequest-springapp
+  template:
+    metadata:
+      labels:
+        app: servicerequest-springapp
+    spec:
+      volumes:
+      - name: config
+        emptyDir: {}
+      initContainers:
+      - name: git-clone
+        image: alpine/git:1.0.4
+        command: ['/bin/sh', '-c']
+        args: ['git clone --branch $(props.branch) https://github.com/labamol/apimsalab.git && mv servicerequest-springapp-props/$(props.env)/* /config']
+        volumeMounts:
+        - name: config
+          mountPath: /config
+        envFrom:
+          - configMapRef:
+              name: servicerequest-springapp-props
+      containers:
+      - name: servicerequest-springapp
+        image: XXXXXXXXXXXXXX:latest 
+        volumeMounts:
+        - name: config
+            mountPath: /config
+    readOnly: true
+        ports:
+        - containerPort: 8080
