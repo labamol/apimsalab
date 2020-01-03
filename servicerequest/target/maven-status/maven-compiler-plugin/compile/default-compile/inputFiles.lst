@@ -1,8 +1,8 @@
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\config\JaegerConfiguration.java
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\domain\service\ServiceRequestServiceImpl.java
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\repo\ServiceRequestRepository.java
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\domain\model\ServiceRequest.java
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\ServiceRequestApplication.java
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\domain\service\ServiceRequestService.java
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\controller\ServiceRequestController.java
-D:\Avamar\workspace-studio\servicerequest\src\main\java\com\apimsa\labs\servicerequest\doc\SwaggerConfig.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\config\JaegerConfiguration.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\domain\service\ServiceRequestService.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\ServiceRequestApplication.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\domain\service\ServiceRequestServiceImpl.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\doc\SwaggerConfig.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\repo\ServiceRequestRepository.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\domain\model\ServiceRequest.java
+E:\git-dvcs\apimsalab\servicerequest\src\main\java\com\apimsa\labs\servicerequest\controller\ServiceRequestController.java
