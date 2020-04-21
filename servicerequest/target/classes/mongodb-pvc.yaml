@@ -1,0 +1,14 @@
+#DONT USE THIS, INSTEAD USE HELM CHART TO INSTALL AND RUN MONGO
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pv-claim
+  labels:
+    app: mongopv
+spec:  
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  resources:
+    requests:
+      storage: 1Gi

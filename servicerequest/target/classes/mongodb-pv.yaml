@@ -1,0 +1,16 @@
+#DONT USE THIS, INSTEAD USE HELM CHART TO INSTALL AND RUN MONGO
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: task-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /data/mongo1
+    type: DirectoryOrCreate
