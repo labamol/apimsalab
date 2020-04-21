@@ -1,0 +1,4 @@
+# use kubectl -n apimsalab create configmap servicerequestconfig --from-file='cmservicerequest.txt'
+MONGO_HOST: mongo-0.mongo
+MONGO_PORT: 27017
+MONGO_DB: apimsalab_db
