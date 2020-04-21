@@ -1,7 +1,0 @@
-com\apimsa\labs\customer\CustomerApplication.class
-com\apimsa\labs\customer\domain\service\CustomerServiceImpl.class
-com\apimsa\labs\customer\domain\model\Customer.class
-com\apimsa\labs\customer\repo\CassandraConfig.class
-com\apimsa\labs\customer\repo\CustomerRepository.class
-com\apimsa\labs\customer\controller\CustomerController.class
-com\apimsa\labs\customer\domain\service\CustomerService.class

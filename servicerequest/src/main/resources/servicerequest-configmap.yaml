@@ -1,3 +1,4 @@
+# NOT USED. Instead create from key value txt file 
 apiVersion: v1
 kind: ConfigMap
 metadata:

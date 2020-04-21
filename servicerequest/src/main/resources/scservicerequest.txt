@@ -1,0 +1,3 @@
+# use kubectl -n apimsalab create secret generic servicerequestsecret --from-file='scservicerequest.txt'
+MONGO_DBUSER: apimsa
+MONGO_DBPWD: apimsa

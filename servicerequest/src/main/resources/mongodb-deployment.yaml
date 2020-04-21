@@ -1,3 +1,4 @@
+#DONT USE THIS, INSTEAD USE HELM CHART TO INSTALL AND RUN MONGO
 apiVersion: apps/v1
 kind: Deployment
 metadata:

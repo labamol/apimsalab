@@ -5,7 +5,7 @@
 
 	<groupId>com.apimsa.labs</groupId>
 	<artifactId>servicerequest</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<name>servicerequest</name>
@@ -163,9 +163,42 @@
 						</execution>
 					</executions>
 					<configuration>
-				      <to>
-				         <image>apimsalab/${project.artifactId}:${project.version}</image>
+				      <from>
+						<image>openjdk:8u171-alpine</image>
+						<!-- to authenticate with the Docker registry to pull the base image from. Docker Hub when empty -->
+						<!--          <credHelper></credHelper> -->
+						<!-- alternatively use auth in place of credhelper -->
+						<!--
+						<auth>
+							<username> </username>
+							<password> </password>						
+						</auth>
+						-->
+					  </from>
+					  <to>
+				        <image>apimsalab/${project.artifactId}:${project.version}</image>
+						<!-- Use credhelper or auth to authenticate with the Docker registry to push the generated image to. Docker Hub when empty -->
+						<!--          <credHelper></credHelper> -->
+						<tags>
+						  <tag>latest</tag>
+						</tags>
 				      </to>
+					  <container>
+						<jvmFlags>
+						  <jvmFlag>-Xms512m</jvmFlag>
+						  <jvmFlag>-Xmx512m</jvmFlag>
+						  <!-- <jvmFlag>-Xdebug</jvmFlag> -->
+						</jvmFlags>
+						<ports>
+						  <port>8080</port>
+						  <!-- <port>8082-8083/udp</port> -->
+						</ports>
+						<labels>
+						  <name>servicerequestapp</name>
+						  <version>${project.version}</version>
+						</labels> 
+						<format>OCI</format>
+					  </container>
 				   </configuration>
 				</plugin>
 			</plugins>
@@ -218,14 +251,14 @@
 				<configuration>
 					<dateFormat>yyyyMMdd-HHmmss</dateFormat><!--  human-readable part of the version number -->
 					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-					<excludeProperties>git.build.user.*,git.commit.user.*,git.remote.*,git.closest.*</excludeProperties>
+					<excludeProperties>git.build.user.*,git.commit.user.*,git.remote.*,git.closest.*</excludeProperties> <!-- important else will expose lot of details about your source branches -->
 					<includeOnlyProperties>    
 						<includeOnlyProperty>git.commit.id</includeOnlyProperty>
 					</includeOnlyProperties>
 					<generateGitPropertiesFile>true</generateGitPropertiesFile>
 					<generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
 				</configuration>
-			</plugin> -->
+			</plugin> 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>			
 				<artifactId>maven-scm-plugin</artifactId>			
